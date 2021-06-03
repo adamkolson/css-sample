@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Untitled</title>
+	<style>
+	         
+	         div {
+	         padding: 2rem;
+	         margin-bottom: 6rem;
+	         }
+
+	         .static {
+	         position: static;
+	         background-color: #ececec;
+	         }
+	         
+	         .relative {
+	         position: relative;
+	         background-color: #9fd3c7;
+	         }
+	         
+	         .absolute {
+	         position: absolute;
+	         background-color: #ccccea;
+	         }
+	         
+	         .one {
+	             background-color: #3e3245;
+	         }
+	         
+	         .two {
+	             background-color: #ddd;
+	         }
+	         
+	         .one .static {
+	         
+	         }
+	         
+	         .one .relative {
+	          
+	         }
+	         
+	         .one .absolute {
+	             
+	         }
+	         
+	         .two .static {
+	             
+	         }
+	         
+	         .two .relative {
+	          left: -20px;
+	          top: -20px;
+	         }
+	         
+	         .two .absolute {
+	          left: -20px;
+	          top: -20px;
+	         }
+	         
+	         .three .relative {
+	             left: 35px;
+	             top: 35px;
+	         }
+	         
+	         .three .absolute {
+	             left: -15px;
+	             top: 45px;
+	         }
+	         
+	         .four .absolute {
+	         left: -15px;
+	             top: 45px;
+	         	z-index: -500;
+	         }
+	         
+
+	</style>
+	<script>
+	</script>
+</head>
+
+<body>
+	<div class="one">
+		<div class="static">
+			One. Hey, I'm a static element! That's the default.
+		</div>
+
+
+		<div class="relative">
+			Two. Guess what, I'm a relative element! Nothing much to see.
+		</div>
+
+
+		<div class="absolute">
+			Three. And, I'm an absolute element! Look how I spill out of this area.
+		</div>
+	</div>
+
+	<hr>
+
+
+	<div class="two">
+		<div class="static">
+			Four. Hey, I'm another static element!
+		</div>
+
+
+		<div class="relative">
+			Five. Guess what, I'm a relative element and moved <code>left: -20px;</code> and <code>top: -20px;</code>!
+		</div>
+
+
+		<div class="absolute">
+			Six. And, I'm an absolute element and moved <code>left: -20px;</code> and <code>top: -20px;</code>!
+		</div>
+	</div>
+
+
+	<div class="three">
+		<div class="static">
+			Seven. Hey, I'm yet another static element!
+		</div>
+
+
+		<div class="relative">
+			Eight. I'm a relative element guess what's inside of me? An absolute element! I'm moved <code>left: 35px;</code> and <code>top: 35px;</code>!
+
+			<div class="absolute">
+				Nine. And, I'm an absolute element inside a relative element and moved <code>left: -15px;</code> and <code>top: 45px;!</code>
+			</div>
+		</div>
+	</div>
+	
+	<div class="four">
+		<div class="static">
+			Seven. Just another static element chilling!
+		</div>
+
+
+		<div class="relative">
+			Eight. I'm a relative element guess what's inside of me? An absolute element! I'm moved <code>left: 35px;</code> and <code>top: 35px;</code>!
+
+			<div class="absolute">
+				Nine. Oh, and, I'm also an absolute element inside a relative element and moved <code>left: -15px;</code> and <code>top: 45px;!</code> only I have a <code>z-index</code> of <code>-500</code>!
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
